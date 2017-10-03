@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   homeTitle = 'Welcome to the ninja directory!';
+  myString = 'This is my String. Are you sure about that';
+  myBoolean = true;
   constructor() { }
 
   ngOnInit() {
   }
 
+  alertMe(val) {
+    alert(val);
+  }
 }
