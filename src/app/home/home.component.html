@@ -3,7 +3,18 @@
 </p>
 <ng-content></ng-content>
 
+<!-- event data binding -->
 <input value="{{myString}}">
 <input [required]="myBoolean">
 
 <button (click)="alertMe('This is Kaung San')">Click me</button>
+
+<!-- 2-way data binding -->
+<!-- two way data binding in a nutshell -->
+<input [value]="ninja.name" (input)="ninja.name = $event.target.value">
+<p>{{ninja.name}}</p>
+
+<!-- 2-way with ngModel -->
+<!-- Need to improt FormsModule form @angular/forms -->
+<input type="text" [(ngModel)]="myTest">
+<p>{{myTest}}</p>

@@ -10,6 +10,13 @@ export class HomeComponent implements OnInit {
   homeTitle = 'Welcome to the ninja directory!';
   myString = 'This is my String. Are you sure about that';
   myBoolean = true;
+
+  myTest = 'This is myTest';
+  ninja = {
+    name: 'Name1',
+    belt: 'Belt1'
+  };
+
   constructor() { }
 
   ngOnInit() {
