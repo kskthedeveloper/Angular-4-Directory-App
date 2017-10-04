@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   myBoolean = true;
 
   myTest = 'This is myTest';
+
+  @Input() person;
   ninja = {
     name: 'Name1',
     belt: 'Belt1'

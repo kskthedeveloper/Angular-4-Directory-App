@@ -18,3 +18,10 @@
 <!-- Need to improt FormsModule form @angular/forms -->
 <input type="text" [(ngModel)]="myTest">
 <p>{{myTest}}</p>
+
+<!-- From Root Component to Other Component -->
+<!-- Data in Root Component e.g person -->
+<!-- add Data in Other component e.g <app-home [person]='person' -->
+<!-- In Other Component, use is with @Input() person -->
+<h1>{{person.name}}</h1>
+<p>{{person.location}}</p>
