@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { FilterPipe } from './filter.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DirectoryComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
