@@ -3,6 +3,8 @@
     <label>Filter People by name: </label>
     <!-- TO ASK -->
     <input [value]="term" (input)="term = $event.target.value">
+
+    <!-- <input type=text [(ngModel)]="term" /> -->
 </form>
 <ul id="ninja-listing">
     <li *ngFor="let person of people | filter:term">
@@ -12,3 +14,6 @@
         </div>
     </li>
 </ul>
+
+<button (click)="logIt()">Log me</button>
+<button(click)="logIt()">Log me</button>

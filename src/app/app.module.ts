@@ -19,7 +19,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    FilterPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
