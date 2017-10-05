@@ -2,15 +2,13 @@
     <h1>{{title}}</h1>
     <nav>
         <ul>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/directory">Directory</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="main">
-    <app-home [person]='person'>
-        <h1>My Test</h1>
-    </app-home>
+    <br>
+    <router-outlet></router-outlet>
 </section>

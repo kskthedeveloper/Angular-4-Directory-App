@@ -25,3 +25,6 @@
 <!-- In Other Component, use is with @Input() person -->
 <h1>{{person.name}}</h1>
 <p>{{person.location}}</p>
+
+<!-- From Other Component to Root Component -->
+<button (click)="fireYellEvent($event)">To Root Component</button>
