@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
 
   myTest = 'This is myTest';
 
+  classes = {'blue': true, 'red': false, 'underline': true};
+  test = true;
+
   @Input() person;
   @Output() onYell = new EventEmitter();
   ninja = {

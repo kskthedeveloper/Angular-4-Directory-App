@@ -28,3 +28,27 @@
 
 <!-- From Other Component to Root Component -->
 <button (click)="fireYellEvent($event)">To Root Component</button>
+
+<p>
+    Testing Directives
+</p>
+<ul>
+    <li [ngClass]="classes">Attribute eg. ngClass</li>
+    <li *ngIf="test">Structural eg. *ngIf</li>
+</ul>
+
+<style>
+    .blue {
+        color: blue;
+    }
+    
+    .red {
+        color: red;
+    }
+    
+    .underline {
+        text-decoration: underline
+    }
+    
+    ;
+</style>
