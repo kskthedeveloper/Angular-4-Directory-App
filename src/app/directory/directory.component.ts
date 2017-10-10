@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
 import { LoggingService } from '../logging.service';
 import { DataService } from '../data.service';
+declare var firebase:any;
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
@@ -13,7 +14,7 @@ import { DataService } from '../data.service';
 export class DirectoryComponent implements OnInit {
   ninja: string;
   term = '';
-  people = [''];
+  people: any[] = [];
   constructor(private dataService: DataService) {}
 
   // logIt(){
@@ -21,9 +22,17 @@ export class DirectoryComponent implements OnInit {
   // }
 
   ngOnInit() {
-    this.dataService.fetchData().subscribe(
-      (data) => this.people = data
-    )
+    // this.dataService.fetchData().subscribe(
+    //   (data) => this.people = data
+    // )
+    
+    this.fbGetData();
+  }
+
+  fbGetData() {
+    firebase.database().ref('/').on('child_added', (snapshot) => {
+      this.people.push(snapshot.val())
+    })
   }
 
 }
