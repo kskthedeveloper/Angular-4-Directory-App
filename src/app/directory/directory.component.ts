@@ -2,30 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
 import { LoggingService } from '../logging.service';
-
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
+  providers: [ DataService ]
 })
 
 export class DirectoryComponent implements OnInit {
   ninja: string;
   term = '';
-  people = [
-    {name: 'Kaung', belt: 'black'},
-    {name: 'San', belt: 'blue'},
-    {name: 'Kyaw', belt: 'red'},
-  ];
-  constructor(private logger: LoggingService) {
+  people = [''];
+  constructor(private dataService: DataService) {}
 
-  }
-
-  logIt(){
-    this.logger.log();
-  }
+  // logIt(){
+  //   this.logger.log();
+  // }
 
   ngOnInit() {
+    this.dataService.fetchData().subscribe(
+      (data) => this.people = data
+    )
   }
 
 }
