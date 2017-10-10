@@ -25,7 +25,6 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgModule,
     RouterModule.forRoot(routes)
   ],
   providers: [LoggingService],

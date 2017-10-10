@@ -15,4 +15,8 @@
     </li>
 </ul>
 
-<button (click)="logIt()">Log me</button>
+<form id="add-ninja">
+    <input type="text" [value]="name" (input)="name = $event.target.value" />
+    <input type="text" [value]="belt" (input)="belt = $event.target.value" />
+    <button (click)="fbPostData()">Add New</button>
+</form>

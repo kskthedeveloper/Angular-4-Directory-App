@@ -13,6 +13,10 @@ declare var firebase:any;
 
 export class DirectoryComponent implements OnInit {
   ninja: string;
+
+  name: string = "";
+  belt: string = "";
+
   term = '';
   people: any[] = [];
   constructor(private dataService: DataService) {}
@@ -35,4 +39,8 @@ export class DirectoryComponent implements OnInit {
     })
   }
 
+  fbPostData() {
+    // console.log(this.name + "->" + this.belt);
+    firebase.database().ref('/').push({name: this.name, belt: this.belt});
+  }
 }
