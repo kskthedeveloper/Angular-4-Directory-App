@@ -8,7 +8,7 @@ export class DataService {
   constructor(private http: Http) { }
 
   fetchData() {
-    return this.http.get('assets/data/people.json').map(
+    return this.http.get('https://nn-angular-cc307.firebaseio.com/.json').map(
       (res) => res.json()
     )
   }
